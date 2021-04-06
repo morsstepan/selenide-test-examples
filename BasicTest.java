@@ -1,10 +1,13 @@
 package ru.krista.pfhd.autotest;
-import com.google.common.collect.ImmutableList; import org.junit.*;
+import com.google.common.collect.ImmutableList; 
+import org.junit.*;
 import ru.krista.core.autotest.ntp.*;
 import ru.krista.core.autotest.rule.BaseRule;
-import static com.codeborne.selenide.Selenide.open; public class OrganisationVerificationTest {
-private String testStandUrl = System.getProperty("stand"); @Rule
-public BaseRule rule = new BaseRule();
+import static com.codeborne.selenide.Selenide.open; 
+public class OrganisationVerificationTest {
+	private String testStandUrl = System.getProperty("stand"); 
+	@Rule
+	public BaseRule rule = new BaseRule();
 	@Test
 	public void testOrganisationsAreVerified() {
 		LogInPage logInPage = open(testStandUrl, LogInPage.class); 
